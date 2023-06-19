@@ -1,5 +1,22 @@
 # docker compose installation
 
+## Method 1 - Install using the repository
+
+1. For Ubuntu and Debian, run:
+
+```bash
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
+
+2. To Verify
+
+```bash
+docker compose version
+```
+
+## Method 2 - Install the plugin manually
+
 1. To download and install the Compose CLI plugin, run:
 
 ```bash
