@@ -1,5 +1,7 @@
 # docker compose installation
 
+Method 1 and method 2 require `Docker Engine` and `Docker CLI` as prerequisites for `docker compose` installation.
+
 ## Method 1 - Install using the repository
 
 1. For Ubuntu and Debian, run:
@@ -43,3 +45,23 @@ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 ```bash
 docker compose version
 ```
+
+## Method 3 - Install Compose standalone
+
+1. To download and install Compose standalone, run:
+
+```bash
+curl -SL https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+```
+
+2. Apply executable permissions to the standalone binary in the target path for the installation.
+
+```bash
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+3. Test and execute compose commands using `docker-compose`.
+
+> **Note**:
+> Compose standalone uses the `-compose` syntax instead of the current standard syntax `compose`.
+> For example type `docker-compose up` when using Compose standalone, instead of `docker compose up`.
